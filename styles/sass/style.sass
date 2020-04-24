@@ -1,7 +1,7 @@
 *
     box-sizing: border-box
 
-h1, h3
+h1, h3, p
     margin: 0
 
 .input-settings
@@ -43,14 +43,20 @@ body
 
         .buttons
             display: flex
-            
+
+            button:hover
+                    box-shadow: 2px 6px 15px rgba(0, 0, 0, 0.3)
+                    transition: all 0.2s
+                    opacity: 0.9
+                    transform: scale(1.1)
+
             .nav-button
                 max-height: 40px
                 background-repeat: no-repeat
                 background-position: left 16px center
                 padding: 8px 16px 8px 33px
                 font-size: 16px
-                border-radius: 2px
+                border-radius: 3px
                 line-height: 24px
 
             .login-btn
@@ -59,23 +65,27 @@ body
                 background-image: url(../../img/user.svg)
                 margin-right: 10px
                 color: #fff
-                
+                transition: all 0.2s
 
             .basket-btn
                 background-color: #fff
                 border: 1px solid #ececec 
                 background-image: url(../../img/basket.svg)
                 color: #595959
+                transition: all 0.2s
         
     .billboard
         width: 1200px
         height: 300px
         box-shadow: 0px 7px 12px rgba(158, 158, 163, 0.1)
         background-color: #FFF1B8
-        background-image: url(../../img/pizza.svg)
+        // background-image: url(../../img/pizza.svg)
+        // background-repeat: no-repeat
+        // background-position: right 70px center
+        // background-size: 270px
+        background-image: url(../../img/bg-billboard.png)
         background-repeat: no-repeat
-        background-position: right 70px center
-        background-size: 270px
+        background-position: right center
 
         .content
             padding: 68px 0 0 70px
@@ -127,13 +137,95 @@ body
                 box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.05)
                 border-radius: 7px 
                 margin-bottom: 30px 
-                border: 2px solid red
+                transition: all 0.2s
 
-                // .block-image
-                //     width: 384px
-                //     height: 250px
-                //     background: url(../../img/bg-block-1.jpg) 
+                &:hover
+                    transform: scale(1.05)
+                    transition: all 0.2s
 
+                img
+                    object-fit: cover
+                    width: 384px
+                    height: 250px
+
+                .description
+                    margin: auto
+                    width: 336px 
+
+                    .description-title
+                        padding-top: 20px
+                        display: flex
+                        align-items: center
+                        justify-content: space-between
+                        margin-bottom: 12px
+
+                        p
+                            font-weight: bold
+                            font-size: 24px
+                            line-height: 32px
+
+                        span
+                            font-style: normal
+                            font-size: 12px
+                            line-height: 20px
+                            color: #FFF
+                            background-color: #262626
+                            border-radius: 3px
+                            padding: 2px 8px
+
+                    .description-info
+
+                        span
+                            font-weight: normal
+                            font-size: 18px
+                            line-height: 32px
+                            color: #8c8c8c
+
+                            &.rate
+                                background: url(../../img/rate-icon.svg) no-repeat left 0px top 3px
+                                padding-left: 22px
+                                padding-right: 20px
+
+                            &.price::after
+                                content: ''
+                                margin: 0 10px 1% 10px
+                                background-color: #8c8c8c
+                                display: inline-block
+                                width: 5px
+                                height: 5px
+                                border-radius: 50%
+                                
 footer 
     background-color: #fff
+
+    .footer-content
+        display: flex
+        justify-content: space-between
+        align-items: center 
+        padding: 60px 0 60px
+
+        .footer-nav
+            
+            ul
+                display: flex
                 
+                li
+                    list-style: none
+                    padding-right: 15px
+
+                    a
+                        text-decoration: none
+                        font-weight: normal
+                        font-size: 18px
+                        line-height: 21px
+                        color: #595959
+                        transition: all 0.2s
+
+                        &:hover
+                            color: #1890ff
+                            transition: all 0.2s
+
+        .footer-socials
+
+            a
+                padding-left: 20px                
