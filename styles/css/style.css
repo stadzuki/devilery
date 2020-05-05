@@ -17,14 +17,13 @@ h1, h3, p {
 body {
   background: linear-gradient(180deg, rgba(245, 245, 245, 0) 1.04%, #f5f5f5 100%);
   font-family: 'Roboto', sans-serif;
-  font-display: swap;
   font-style: normal;
   font-weight: normal;
   padding: 0;
   margin: 0; }
 
 .container {
-  max-width: 1220px;
+  max-width: 1200px;
   padding: 0 10px;
   margin: auto; }
 
@@ -58,12 +57,13 @@ body {
         line-height: 24px; }
       .header .navigation .buttons .login-btn {
         background-color: #1890FF;
-        border: 1px solid #1890ff;
+        border: 1px solid #1890FF;
         background-image: url(../../img/user.svg);
-        margin-right: 10px;
         color: #fff;
         transition: all 0.2s; }
       .header .navigation .buttons .basket-btn {
+        display: none;
+        margin-left: 10px;
         background-color: #fff;
         border: 1px solid #ececec;
         background-image: url(../../img/basket.svg);
@@ -90,86 +90,89 @@ body {
         font-size: 24px;
         line-height: 28px; }
 
-.products .caption {
+.restaurants {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 50px; }
-  .products .caption .caption-text {
-    color: #000;
-    font-weight: bold;
-    font-size: 36px;
-    line-height: 42px; }
-  .products .caption .caption-search-input {
-    width: 305px;
-    height: 35px;
-    background: url(../../img/search.svg) no-repeat left 12px center; }
-
-.products .dishes {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between; }
-  .products .dishes .block {
-    overflow: hidden;
-    flex-basis: 384px;
-    height: 379px;
-    background-color: #fff;
-    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
-    border-radius: 7px;
-    margin-bottom: 30px;
-    transition: all 0.2s; }
-    .products .dishes .block:hover {
-      transform: scale(1.05);
-      transition: all 0.2s;
-      cursor: pointer; }
-    .products .dishes .block img {
-      object-fit: cover;
-      width: 384px;
-      height: 250px; }
-    .products .dishes .block .description {
-      margin: auto;
-      width: 336px; }
-      .products .dishes .block .description .description-title {
-        padding-top: 20px;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        margin-bottom: 12px; }
-        .products .dishes .block .description .description-title p {
-          font-weight: bold;
-          font-size: 24px;
-          line-height: 32px; }
-        .products .dishes .block .description .description-title span {
-          font-style: normal;
-          font-size: 12px;
-          line-height: 20px;
-          color: #FFF;
-          background-color: #262626;
-          border-radius: 3px;
-          padding: 2px 8px; }
-      .products .dishes .block .description .description-info span {
-        font-weight: normal;
-        font-size: 18px;
-        line-height: 32px;
-        color: #8c8c8c; }
-        .products .dishes .block .description .description-info span.rub {
-          font-family: 'PT Sans', serif;
+  flex-direction: column;
+  justify-content: space-around; }
+  .restaurants .caption {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 50px; }
+    .restaurants .caption .caption-text {
+      color: #000;
+      font-weight: bold;
+      font-size: 36px;
+      line-height: 42px; }
+    .restaurants .caption .caption-search-input {
+      width: 305px;
+      height: 35px;
+      background: url(../../img/search.svg) no-repeat left 12px center; }
+  .restaurants .dishes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; }
+    .restaurants .dishes .block {
+      overflow: hidden;
+      flex-basis: 384px;
+      height: 379px;
+      background-color: #fff;
+      box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+      border-radius: 7px;
+      margin-bottom: 30px;
+      transition: all 0.2s; }
+      .restaurants .dishes .block:hover {
+        transform: scale(1.05);
+        transition: all 0.2s;
+        cursor: pointer; }
+      .restaurants .dishes .block img {
+        object-fit: cover;
+        width: 384px;
+        height: 250px; }
+      .restaurants .dishes .block .description {
+        margin: auto;
+        width: 336px; }
+        .restaurants .dishes .block .description .description-title {
+          padding-top: 20px;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          margin-bottom: 12px; }
+          .restaurants .dishes .block .description .description-title p {
+            font-weight: bold;
+            font-size: 24px;
+            line-height: 32px; }
+          .restaurants .dishes .block .description .description-title span {
+            font-style: normal;
+            font-size: 12px;
+            line-height: 20px;
+            color: #FFF;
+            background-color: #262626;
+            border-radius: 3px;
+            padding: 2px 8px; }
+        .restaurants .dishes .block .description .description-info span {
           font-weight: normal;
-          font-style: normal;
-          font-size: inherit; }
-        .products .dishes .block .description .description-info span.rate {
-          background: url(../../img/rate-icon.svg) no-repeat left 0px top 3px;
-          padding-left: 22px;
-          padding-right: 20px;
-          color: #FFC107; }
-        .products .dishes .block .description .description-info span.price::after {
-          content: '';
-          margin: 0 10px 1% 10px;
-          background-color: #8c8c8c;
-          display: inline-block;
-          width: 5px;
-          height: 5px;
-          border-radius: 50%; }
+          font-size: 18px;
+          line-height: 32px;
+          color: #8c8c8c; }
+          .restaurants .dishes .block .description .description-info span.rub {
+            font-family: 'PT Sans', serif;
+            font-weight: normal;
+            font-style: normal;
+            font-size: inherit; }
+          .restaurants .dishes .block .description .description-info span.rate {
+            background: url(../../img/rate-icon.svg) no-repeat left 0px top 3px;
+            padding-left: 22px;
+            padding-right: 20px;
+            color: #FFC107; }
+          .restaurants .dishes .block .description .description-info span.price::after {
+            content: '';
+            margin: 0 10px 1% 10px;
+            background-color: #8c8c8c;
+            display: inline-block;
+            width: 5px;
+            height: 5px;
+            border-radius: 50%; }
 
 footer {
   background-color: #fff; }
@@ -249,5 +252,15 @@ footer {
             padding: 2px 5px;
             border-radius: 2px;
             border: 1px solid #d8d8d8; } }
+
+@media only screen and (max-width: 1170px) {
+  .header .navigation {
+    justify-content: space-around; }
+  .restaurants .caption {
+    justify-content: space-around; }
+  .restaurants .dishes {
+    justify-content: space-around; }
+  footer .footer-content {
+    justify-content: space-around; } }
 
 /*# sourceMappingURL=style.css.map */
